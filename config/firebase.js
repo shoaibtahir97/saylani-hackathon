@@ -27,6 +27,19 @@ function signInFirebase(userInfo) {
     // addAdminToDB(userId, userInfo )
 }
 
+function createClassInDB(userInfo) {
+    let {timing, classes, teacher, section, course, batch} = userInfo;
+    return addDoc(collection(db, "classes"), {
+        timing,
+        classes,
+        teacher,
+        section,
+        course,
+        batch
+    })
+}
+
+
 // async function addAdminToDB(userId, userInfo) {
 //     const { email, name } = userInfo
 
@@ -36,5 +49,6 @@ function signInFirebase(userInfo) {
 
 export{
     signInFirebase,
+    createClassInDB
 }
 
