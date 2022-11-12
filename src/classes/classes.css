@@ -1,0 +1,9 @@
+#show-classes{
+    display: flex;
+    
+}
+
+.card{
+    margin-right: 10px;
+    height: 250px;
+}

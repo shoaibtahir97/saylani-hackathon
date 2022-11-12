@@ -12,6 +12,23 @@
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img width="70" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm_oi96iDOT2Hox5ndEo9HKGjQkkKXP_Om9ngMEU-0XQ&s" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ">
+          <a class="nav-link" href="../classes/classes.html">Classes</a>
+          <a class="nav-link" href="./students.html">Student</a>
+          <a class="nav-link" href="#">Attendance</a>
+          
+          <a class="nav-link disabled">Admin <img src="" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
   <h1>This is admin page</h1>
 
@@ -92,7 +109,7 @@
       </div>
     </div>
   </div>
-
+ 
 
 
   <!-- Register Student -->
@@ -137,7 +154,7 @@
 
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Enter CNIC Number</label>
-              <input type="number" max="13" name="" class="form-control" id="cnic-no">
+              <input type="number" name="" class="form-control" id="cnic-no">
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Upload Image</label>
@@ -146,7 +163,7 @@
 
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Select Course Name</label>
-              <select class="form-control" required name="course" id="course">
+              <select class="form-control" required name="student-course" id="student-course">
                 <option value="Web and Mobile Application Development">Web and Mobile Application Development</option>
                 <option value="Graphic Designing">Graphic Designing</option>
                 <option value="Ai and ChatBot">Ai and ChatBot</option>
@@ -155,7 +172,7 @@
 
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Select Class </label>
-              <select class="form-control" required name="class" id="class">
+              <select class="form-control"  name="class" id="classes">
                 
               </select>
             </div>

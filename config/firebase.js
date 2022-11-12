@@ -39,6 +39,21 @@ function createClassInDB(userInfo) {
     })
 }
 
+function registerStudentInDB(studentInfo) {
+    let {name, fatherName, rollNo, phoneNo, cnicNo, course,classses} = studentInfo;
+    return addDoc(collection(db, "students"),{
+        name, fatherName, rollNo, phoneNo, cnicNo, course,classses
+    })
+}
+
+async function getClassesFromDb() {
+    const querySnapshot = await getDocs(collection(db, "classes")) //DB se data le rhe hain aur variable me save horha hai
+    const classes = []; //empty array create ki hai kis me data from DB push hoga
+    querySnapshot.forEach((doc) => { // variable pe for loop laga hai jis me doc 
+        classes.push({ id: doc.id, ...doc.data() }) //
+    });
+    return classes;
+}
 
 // async function addAdminToDB(userId, userInfo) {
 //     const { email, name } = userInfo
@@ -49,6 +64,8 @@ function createClassInDB(userInfo) {
 
 export{
     signInFirebase,
-    createClassInDB
+    createClassInDB,
+    registerStudentInDB,
+    getClassesFromDb
 }
 

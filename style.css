@@ -1,0 +1,48 @@
+.container-fluid {
+    background-color: #0066B3;
+    padding: 50px;
+}
+
+.container-fluid .row {
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    height: 90vh;
+    border: none;
+    border-radius: 20px;
+    border: none;
+}
+
+.container-fluid .row .col-one,
+.container-fluid .row .col-two {
+    background-color: white;
+    margin: auto 0;
+}
+
+.image {
+    width: 20%;
+    border-radius: 50%;
+}
+
+
+h1{
+    text-transform: uppercase;
+    letter-spacing: 1.5 px;
+}
+
+.container-fluid .row .col .form-control{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.container-fluid .row .col .btn {
+    width: 60%;
+    padding: 10px 0px;
+    border-radius: 50px;
+}
+
+.vr{
+    margin: 10px;
+    
+}
