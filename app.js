@@ -5,13 +5,12 @@ window.signIn = async function() {
     let password = document.getElementById("password").value;
 
     try{
-        signInFirebase(email, password)
-        alert("Admin Login successfully")
+         signInFirebase({email, password})
+        alert("Admin Login successfully", location.replace("/src/admin/admin.html"))
     }   
     catch(e){
         let errorElem = document.getElementById("error");
         errorElem.innerHTML = e.message;
     } 
-
-
 }
+
