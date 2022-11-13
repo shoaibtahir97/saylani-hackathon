@@ -1,6 +1,23 @@
-import { getClassesFromDb } from '../../config/firebase.js'
+import { getClassesFromDb, createClassInDB } from '../../config/firebase.js'
 
 getClasses()
+
+window.createClass = async function () {
+    const timing = document.getElementById("timing").value;
+    const classes = document.getElementById("class").value;
+    const teacher = document.getElementById("teacher").value;
+    const section = document.getElementById("section").value;
+    const course = document.getElementById("course").value;
+    const batch = document.getElementById("batch").value;
+
+    try {
+        await createClassInDB({ timing, classes, teacher, section, course, batch })
+        alert("Class Created Successfully", window.location.reload());
+    }
+    catch (e) {
+        console.log(e.message);
+    }
+}
 
 async function getClasses() {
     const createdClasses = await getClassesFromDb()
@@ -12,16 +29,18 @@ async function getClasses() {
         ddiv.innerHTML = `
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Batch: ${item.batch}</h5>
-                <h5 class="card-title">Classes: ${item.classes}</h5>
-                <h5 class="card-title">Course: ${item.course}</h5>
-                <h5 class="card-title">Section: ${item.section}</h5>
-                <h5 class="card-title"> Batch: ${item.batch}</h5>
-                <h5 class="card-title">Timing: ${item.timing}</h5>
-                <a href="#" class="btn btn-primary">Edit </a>
+                <p class="card-text"><b>Course Name: </b>${item.course}</p>
+                <p class="card-text"><b>Batch: </b>${item.batch}</p>
+                <p class="card-text"><b>Section: </b>${item.section}</p>
+                <p class="card-text"><b>Classes: </b>${item.classes}</p>
+                <p class="card-text"><b>Timings: </b>${item.timing}</p>
+                <p class="card-text"><b>Teacher Name: </b>${item.teacher}</p>
+            </div>
+            <div class="card-footer ">
+                <a href="#" class="btn btn-primary">Edit Class</a>
             </div>
         </div>
         `;
         div.appendChild(ddiv);
-   }
+    }
 }

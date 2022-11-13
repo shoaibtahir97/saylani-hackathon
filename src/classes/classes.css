@@ -1,9 +1,29 @@
-#show-classes{
+#show-classes {
     display: flex;
-    
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
 
-.card{
+body .container #show-classes div {
     margin-right: 10px;
-    height: 250px;
+    margin-bottom: 20px;
+
+}
+
+body .card {
+    height: 100%;
+
+}
+
+body .create-class-btn {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body .container #show-classes div .card .card-footer {
+    margin: 0;
 }

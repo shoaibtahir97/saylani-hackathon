@@ -20,9 +20,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ">
+          <a class="nav-link" href="/src/admin/admin.html">Home</a>
           <a class="nav-link" href="../classes/classes.html">Classes</a>
-          <a class="nav-link" href="./students.html">Student</a>
-          <a class="nav-link" href="#">Attendance</a>
+          <a class="nav-link" href="../students/students.html">Student</a>
+          <a class="nav-link" href="../attendance/attendance.html">Attendance</a>
           
           <a class="nav-link disabled">Admin <img src="" alt=""></a>
         </div>
@@ -32,84 +33,6 @@
 
   <h1>This is admin page</h1>
 
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Create Class
-  </button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <form onsubmit="createClass(); return false">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Create Class</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Select Class Timings</label>
-              <select class="form-control" required name="timing" id="timing">
-                <option value="09:00 AM - 11:00 PM">09:00 AM - 11:00 AM</option>
-                <option value="11:00 AM - 01:00 PM">11:00 AM - 01:00 PM</option>
-                <option value="09:00 PM - 11:00 PM">09:00 PM - 11:00 PM</option>
-                <option value="06:00 PM - 08:00 PM">06:00 PM - 08:00 PM</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Select Class Schedule</label>
-              <select class="form-control" required name="schedule" id="class">
-                <option value="Monday - Wednesday - Friday">Monday - Wednesday - Friday</option>
-                <option value="Tuesday - Thursday - Saturday">Tuesday - Thursday - Saturday</option>
-                <option value="Saturday - Sunday">Saturday - Sunday</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Select Teacher's name</label>
-              <select class="form-control" required name="schedule" id="teacher">
-                <option value="Rizwan">Sir Rizwan Jamal</option>
-                <option value="Kashif">Sir Kashif Sulaiman</option>
-                <option value="Haider">Sir Haider Ali</option>
-                <option value="Ghous">Sir Ghous Ahmed</option>
-                <option value="Ishaq">Sir Ishaq</option>
-              </select>
-            </div>
-
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Select Section Name</label>
-              <select class="form-control" required name="schedule" id="section">
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-              </select>
-            </div>
-
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Select Course Name</label>
-              <select class="form-control" required name="schedule" id="course">
-                <option value="Web and Mobile Application Development">Web and Mobile Application Development</option>
-                <option value="Graphic Designing">Graphic Designing</option>
-                <option value="Ai and ChatBot">Ai and ChatBot</option>
-              </select>
-            </div>
-
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Select Batch Number</label>
-              <input type="number" required class="form-control" name="" id="batch">
-            </div>
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit button" class="btn btn-primary">Create Class</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
- 
 
 
   <!-- Register Student -->
