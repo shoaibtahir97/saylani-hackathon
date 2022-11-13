@@ -40,9 +40,9 @@ function createClassInDB(userInfo) {
 }
 
 function registerStudentInDB(studentInfo) {
-    let {name, fatherName, rollNo, phoneNo, cnicNo, course,classses} = studentInfo;
+    let {name, fatherName, rollNo, phoneNo, cnicNo, course,classes} = studentInfo;
     return addDoc(collection(db, "students"),{
-        name, fatherName, rollNo, phoneNo, cnicNo, course,classses
+        name, fatherName, rollNo, phoneNo, cnicNo, course,classes
     })
 }
 
@@ -53,6 +53,15 @@ async function getClassesFromDb() {
         classes.push({ id: doc.id, ...doc.data() }) //
     });
     return classes;
+}
+
+async function getRegisteredStudents() {
+    const querySnapshot = await getDoc(collection(db, "students"))
+    const students = [];
+    querySnapshot.forEach((doc) => {
+        students.push({id: doc.id, ...doc.data()})
+    });
+    return students;
 }
 
 // async function addAdminToDB(userId, userInfo) {
@@ -66,6 +75,7 @@ export{
     signInFirebase,
     createClassInDB,
     registerStudentInDB,
-    getClassesFromDb
+    getClassesFromDb,
+    getRegisteredStudents
 }
 

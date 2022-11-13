@@ -1,0 +1,29 @@
+#show-classes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+body .container #show-students div {
+    margin-right: 10px;
+    margin-bottom: 20px;
+
+}
+
+body .card {
+    height: 100%;
+
+}
+
+body .register-student {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body .container #show-classes div .card .card-footer {
+    margin: 0;
+}
