@@ -18,9 +18,9 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 
-function signInFirebase(userInfo) {
+async function signInFirebase(userInfo) {
     let {email, password} = userInfo
-    signInWithEmailAndPassword(auth, email, password)
+    await signInWithEmailAndPassword(auth, email, password)
     
     // const userId = auth.currentUser.uid;
     

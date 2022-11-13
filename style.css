@@ -1,12 +1,13 @@
 .container-fluid {
     background-color: #0066B3;
     padding: 50px;
+    width: 100%;
 }
 
 .container-fluid .row {
     background-color: white;
     width: 80%;
-    margin: 0 auto;
+    margin: 0px auto;
     height: 90vh;
     border: none;
     border-radius: 20px;
@@ -22,8 +23,13 @@
 .image {
     width: 20%;
     border-radius: 50%;
+    height: auto;
 }
 
+.logo{
+    width: 100%;
+    height: auto;
+}
 
 h1{
     text-transform: uppercase;
@@ -42,7 +48,7 @@ h1{
     border-radius: 50px;
 }
 
-.vr{
-    margin: 10px;
-    
+#error{
+    color: red;
+    font-weight: bold;
 }

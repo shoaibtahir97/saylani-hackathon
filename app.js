@@ -5,7 +5,7 @@ window.signIn = async function() {
     let password = document.getElementById("password").value;
 
     try{
-         signInFirebase({email, password})
+        await signInFirebase({email, password})
         alert("Admin Login successfully", location.replace("/src/admin/admin.html"))
     }   
     catch(e){
